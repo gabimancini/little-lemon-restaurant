@@ -1,7 +1,9 @@
-import { Container } from '@chakra-ui/react';
-import { useState } from 'react';
+ import { useState } from 'react';
 import FormInput from './FormInput';
-const BookingForm = () => {
+import { useNavigate } from 'react-router-dom';
+
+const BookingForm = (props) => {
+    const navigate = useNavigate();
     const [values, setValues] = useState({
         name: '',
         email: '',
@@ -17,7 +19,7 @@ const BookingForm = () => {
         placeholder: 'Name',
         label: 'Name',
         errorMessage: "Please, entry a name",
-        pattern: '^[A-Za-z0-9]{3,16$}'
+        pattern: '[A-Za-z0-9]{3,16$}'
     },
     {
         id: 2,
@@ -45,7 +47,14 @@ const BookingForm = () => {
         label: 'Date'
     },
     {
-        id:5,
+        id: 5,
+        name: 'time',
+        type: 'time',
+        placeholder: 'Time',
+        label: 'Time'
+    },
+    {
+        id:6,
         name: 'guests',
         type: 'number',
         placeholder: 'Guests',
@@ -55,11 +64,12 @@ const BookingForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log("enviado");
+        navigate('/confirmed-booking');
     }
 
     const handleChange = (e) => {
         setValues({ ...values, [e.target.name]: e.target.value });
-        console.log(values);
     }
 
     return (
@@ -75,7 +85,9 @@ const BookingForm = () => {
                         onChange={handleChange} />
                 ))
             }
-            <button type="submit" class="group relative flex w-full justify-center rounded-md border border-transparent bg-green-500 py-2 px-4 mt-8 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Sumbit</button>
+            
+            <button className="group relative flex w-full justify-center rounded-md border border-transparent bg-green-500 py-2 px-4 mt-8 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Sumbit</button>
+            
         </form>
         </div>
     )
