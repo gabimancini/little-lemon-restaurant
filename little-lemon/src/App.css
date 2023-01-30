@@ -2,3 +2,34 @@
   width: 40vmin;
   pointer-events: none;
 }
+
+.error-message {
+  color: red;
+}
+
+input,
+select {
+  width: 100%;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 80vh;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+}
+
+.form-container h2{
+  color: #fff;
+  font-size:2.7rem;
+  margin-bottom: 20px;
+}
+
+form {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+}
