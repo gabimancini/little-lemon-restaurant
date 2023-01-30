@@ -1,4 +1,5 @@
 import CallToActionImg from '../assets/img/callToAction.jpeg';
+import { Link } from 'react-router-dom';
 import {
     Button,
     Flex,
@@ -24,7 +25,7 @@ import {
             We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist
             </Text>
             <Stack direction={{ base: 'column', md: 'row'}} spacing={4}>
-              <Button rounded={'full'} bgColor={'green.500'}>Start Booking</Button>
+              <Link to='/booking'><Button rounded={'full'} bgColor={'green.500'}>Start Booking</Button></Link>
             </Stack>
           </Stack>
         </Flex>

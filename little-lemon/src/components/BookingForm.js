@@ -36,8 +36,7 @@ const BookingForm = (props) => {
         type: 'tel',
         placeholder: 'Telephone',
         label: 'Telephone',
-        errorMessage: "It should be a valid telephone",
-        pattern: '[0-9]{3}-[0-9]{2}-[0-9]{3}'
+        errorMessage: "It should be a valid telephone"
     },
     {
         id: 4,

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 const ConfirmedBooking = () => {
     return (
         <div className="flex items-center justify-center h-screen">
@@ -14,9 +15,11 @@ const ConfirmedBooking = () => {
                 stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
               </svg>
+              <Link to='/'>
               <span className="text-sm font-medium">
                 Home
               </span>
+              </Link>
             </a>
           </div>
         </div>
